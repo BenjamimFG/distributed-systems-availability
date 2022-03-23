@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórmula</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="../styles/header.css">
+  <style>
+    main {
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.5em;
+    }
+
+    .where > mjx-container{
+      width: 600px;
+      text-align: left !important;
+      margin: 1em auto !important;
+    }
+  </style>
+</head>
+<body>
+  <header class="menu">
+    <a class="active" href="/pages/formula.html">Fórmula</a>
+    <a href="/pages/chart.html">Gráfico</a>
+  </header>
+  <main>
+    A disponibilidade de um sistema de computação distribuída pode ser dada por:
+    <span class="formula">
+      $$Disponibilidade = \sum_{i=k}^{n} {n \choose i} \cdot {p}^{i} \cdot {(1 - p)}^{n - i}$$
+    </span>
+    Onde:
+    <span class="where">
+      $$n = Número\ de\ máquinas$$
+      $$k = Número\ mínimo\ de\ máquinas\ para\ o\ sistema\ funcionar$$
+      $$p = Probabilidade\ de\ uma\ das\ máquinas\ estar\ funcionando\ em\ um\ dado\ momento$$
+    </span>
+  </main>
+</body>
+</html>

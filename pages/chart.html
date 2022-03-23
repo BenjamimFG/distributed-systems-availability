@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráfico</title>
+  <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/header.css">
+</head>
+<body>
+  <header class="menu">
+    <a href="/pages/formula.html">Fórmula</a>
+    <a class="active" href="/pages/chart.html">Gráfico</a>
+  </header>
+  <main>
+    <div class="controllers">
+      <div class="control-group">
+        <label for="n">N</label>
+        <div class="number-range">
+          <input type="number" name="n" id="n-number" value="1" oninput="update(event, 'n');">
+          <input type="range" name="n"  id="n-range" min="1" max="100" value="1" oninput="update(event, 'n');">
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="k">K</label>
+        <div class="number-range">
+          <input type="number" name="k" id="k-number" value="1" oninput="update(event, 'k');">
+          <input type="range" name="k" id="k-range" min="1" max="100" value="1" oninput="update(event, 'k');" on>
+        </div>
+      </div>
+      <div>
+        <button onclick="plot();">Plotar</button>
+      </div>
+    </div>
+    <div id="chart"></div>
+  </main>
+
+  <script src="../src/index.js"></script>
+</body>
+</html>
